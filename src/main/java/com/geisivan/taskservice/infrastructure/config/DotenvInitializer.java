@@ -1,0 +1,15 @@
+package com.geisivan.taskservice.infrastructure.config;
+
+import org.jetbrains.annotations.NotNull;
+import org.springframework.context.ApplicationContextInitializer;
+import org.springframework.context.ConfigurableApplicationContext;
+
+public class DotenvInitializer implements
+        ApplicationContextInitializer<ConfigurableApplicationContext> {
+
+    @Override
+    public void initialize(@NotNull ConfigurableApplicationContext context) {
+
+        DotenvLoader.load();
+    }
+}
